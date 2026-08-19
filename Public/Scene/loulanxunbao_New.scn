@@ -1,0 +1,8 @@
+[System]
+navmapname=loulanxunbao_New.nav
+monsterfile=loulanxunbao_New_monster.ini
+patrolpoint=loulanxunbao_New_patrolpoint.ini
+growpointdata=loulanxunbao_New_growpoint.txt
+growpointsetup=loulanxunbao_New_growpointsetup.txt
+eventfile=loulanxunbao_New_area.ini
+petfile=loulanxunbao_New_pet.ini

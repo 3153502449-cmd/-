@@ -1,0 +1,8 @@
+[System]
+navmapname=duzhang.nav
+monsterfile=duzhang_monster.ini
+patrolpoint=duzhang_patrolpoint.ini
+growpointdata=duzhang_growpoint.txt
+growpointsetup=duzhang_growpointsetup.txt
+eventfile=duzhang_area.ini
+petfile=duzhang_pet.ini

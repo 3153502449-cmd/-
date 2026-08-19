@@ -1,0 +1,7 @@
+[System]
+navmapname=taohuadao_1.nav
+monsterfile=taohuadao_1_monster.ini
+patrolpoint=taohuadao_1_patrolpoint.ini
+eventfile=taohuadao_1_area.ini
+growpointdata=taohuadao_1_growpoint.txt
+growpointsetup=taohuadao_1_growpointsetup.txt

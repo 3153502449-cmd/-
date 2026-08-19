@@ -1,0 +1,8 @@
+[System]
+navmapname=rongyan.nav
+monsterfile=rongyan_monster.ini
+patrolpoint=rongyan_patrolpoint.ini
+growpointdata=rongyan_growpoint.txt
+growpointsetup=rongyan_growpointsetup.txt
+eventfile=rongyan_area.ini
+petfile=rongyan_pet.ini

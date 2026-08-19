@@ -1,0 +1,76 @@
+--慕容山庄NPC
+--凤萧
+--普通
+
+ x002120_g_ScriptId=002120
+
+--**********************************
+--事件交互入口
+--**********************************
+function  x002120_OnDefaultEvent( sceneId, selfId,targetId )
+--	BeginEvent(sceneId)
+--		AddText(sceneId,"我可以教授本门弟子驾驭羊的能力。")
+--		if	GetMenPai( sceneId, selfId) == 10 then
+--			if	(0==LuaFnHaveSpecificEquitation(  sceneId, selfId, 1105))	then
+--				AddNumText(sceneId, x002120_g_ScriptId,"学习骑术：羚羊",12,40)
+--			end
+--			if	(0==LuaFnHaveSpecificEquitation(  sceneId, selfId, 1106))	then
+--				AddNumText(sceneId, x002120_g_ScriptId,"学习骑术：雪羚羊",12,60)
+--			end
+--		end
+--		AddNumText( sceneId, x002120_g_ScriptId, "骑术介绍", 11, 100 )
+--	EndEvent(sceneId)
+--	DispatchEventList(sceneId,selfId,targetId)
+    BeginEvent( sceneId ) --骑术废除
+		AddText( sceneId, "#{QXQS_130106_12}" )
+	EndEvent( sceneId )
+	DispatchEventList( sceneId, selfId, targetId )
+	return
+end
+
+--**********************************
+--事件列表选中一项
+--**********************************
+function  x002120_OnEventRequest( sceneId, selfId, targetId, eventId )
+	if GetNumText() == 100 then
+		BeginEvent( sceneId )
+			AddText( sceneId, "#{QXQS_130106_12}" )
+		EndEvent( sceneId )
+		DispatchEventList( sceneId, selfId, targetId )
+		return
+	end
+
+	if GetNumText() == 40 then
+		BeginEvent( sceneId )
+			AddText( sceneId,"学习#Y[骑术：羚羊]#W需要花费35#-14，你确定要学习吗？")
+			AddNumText(sceneId, x002120_g_ScriptId,"是",-1,0)
+      AddNumText(sceneId, x002120_g_ScriptId,"否",-1,999)			
+		EndEvent( sceneId )
+		DispatchEventList( sceneId, selfId, targetId )
+		return
+	end
+	
+	if GetNumText() == 60 then
+		BeginEvent( sceneId )
+			AddText( sceneId,"学习#Y[骑术：雪羚羊]#W需要花费290#-14，你确定要学习吗？")
+			AddNumText(sceneId, x002120_g_ScriptId,"是",-1,1)
+      AddNumText(sceneId, x002120_g_ScriptId,"否",-1,999)			
+		EndEvent( sceneId )
+		DispatchEventList( sceneId, selfId, targetId )
+		return
+	end
+	
+	if GetNumText() == 999 then
+		BeginUICommand(sceneId)
+		EndUICommand(sceneId)
+		DispatchUICommand(sceneId,selfId, 1000)
+		return
+	end
+	
+	local level = GetLevel( sceneId, selfId)
+	local skill = GetNumText()
+	if skill == 0 or skill == 1 then
+	  CallScriptFunction((210299), "OnDefaultEvent",sceneId, selfId,targetId, level, skill)
+	end
+end
+

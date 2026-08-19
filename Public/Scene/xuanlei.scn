@@ -1,0 +1,8 @@
+[System]
+navmapname=xuanlei.nav
+monsterfile=xuanlei_monster.ini
+patrolpoint=xuanlei_patrolpoint.ini
+growpointdata=xuanlei_growpoint.txt
+growpointsetup=xuanlei_growpointsetup.txt
+eventfile=xuanlei_area.ini
+petfile=xuanlei_pet.ini

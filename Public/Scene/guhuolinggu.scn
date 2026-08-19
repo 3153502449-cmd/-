@@ -1,0 +1,5 @@
+[System]
+navmapname=guhuolinggu.nav
+monsterfile=guhuolinggu_monster.ini
+patrolpoint=guhuolinggu_patrolpoint.ini
+eventfile=guhuolinggu_area.ini
